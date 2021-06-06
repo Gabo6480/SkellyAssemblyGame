@@ -1,0 +1,55 @@
+Microsoft (R) Macro Assembler Version 14.00.24210.0	    08/24/17 16:22:47
+Source.asm						     Page 1 - 1
+
+
+				.586
+				.model flat, stdcall
+				.stack 4096
+
+				extrn ExitProcess@4 : proc
+
+ 00000000			.data
+ 00000000				demo byte 0 dup(20)
+ 00000000 01				demo2 byte 1
+
+ 00000000			.code
+ 00000000  90			main:nop
+ 00000001  B0 01			mov al, byte
+ 00000003  E8 00000000 E		call ExitProcess@4
+				end main
+Microsoft (R) Macro Assembler Version 14.00.24210.0	    08/24/17 16:22:47
+Source.asm						     Symbols 2 - 1
+
+
+
+
+Segments and Groups:
+
+                N a m e                 Size     Length   Align   Combine Class
+
+FLAT . . . . . . . . . . . . . .	GROUP
+STACK  . . . . . . . . . . . . .	32 Bit	 00001000 Para	  Stack	  'STACK'	 
+_DATA  . . . . . . . . . . . . .	32 Bit	 00000001 Para	  Public  'DATA'	
+_TEXT  . . . . . . . . . . . . .	32 Bit	 00000008 Para	  Public  'CODE'	
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+@CodeSize  . . . . . . . . . . .	Number	 00000000h   
+@DataSize  . . . . . . . . . . .	Number	 00000000h   
+@Interface . . . . . . . . . . .	Number	 00000003h   
+@Model . . . . . . . . . . . . .	Number	 00000007h   
+@code  . . . . . . . . . . . . .	Text   	 _TEXT
+@data  . . . . . . . . . . . . .	Text   	 FLAT
+@fardata?  . . . . . . . . . . .	Text   	 FLAT
+@fardata . . . . . . . . . . . .	Text   	 FLAT
+@stack . . . . . . . . . . . . .	Text   	 FLAT
+ExitProcess@4  . . . . . . . . .	L Near	 00000000 FLAT	External STDCALL
+demo2  . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+demo . . . . . . . . . . . . . .	Byte	 00000000 _DATA	
+main . . . . . . . . . . . . . .	L Near	 00000000 _TEXT	Public STDCALL
+
+	   0 Warnings
+	   0 Errors
